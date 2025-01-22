@@ -235,6 +235,8 @@ func main() {
 	flag.Parse()
 
 	BenchStarskey()
+	fmt.Println()
 	BenchPebble()
+	fmt.Println()
 	BenchBBolt()
 }

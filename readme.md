@@ -10,10 +10,10 @@ Run
 ./bench -nops 100000 -lkv 128
 ```
 
-- **nops**: Number of operations to perform
-- **lkv**: Length of key and value
+- **nops** Number of operations to perform
+- **lkv** Length of key and value
 
-**On crappy laptop**
+**On crappy 4 year old system** run on your server or local machine for better results and on an SSD!
 ```
 StarskyWrite benchmark: 2.672362ms
 Starsky Get benchmark: 208.283µs
