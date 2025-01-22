@@ -9,9 +9,9 @@ Run
 ```
 ./bench -nops 100000 -lkv 128
 ```
+
 - **nops**: Number of operations to perform
 - **lkv**: Length of key and value
-```
 
 **On crappy laptop**
 ```
