@@ -36,7 +36,7 @@ var (
 
 // Random reads, writes, deletes.
 // Synced... so we can compare the performance of the storage engines.
-// TidesDB syncs to disk automatically.
+// Starsky syncs to disk automatically, thus the others should sync as well.
 
 func generateRandomString(n int) string {
 	var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
