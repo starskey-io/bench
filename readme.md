@@ -14,8 +14,10 @@ Run
 - **lkv** Length of key and value
 
 **On crappy 4 year old system** run on your server or local machine for better results and on an SSD!
+
+1000 ops with 128 byte key and value
 ```
-StarskyWrite benchmark: 2.672362ms
+Starsky Write benchmark: 2.672362ms
 Starsky Get benchmark: 208.283µs
 Starsky Delete benchmark: 2.911128ms
 

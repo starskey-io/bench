@@ -90,7 +90,7 @@ func BenchStarskey() {
 			log.Fatal(err)
 		}
 	}
-	fmt.Printf("StarskyWrite benchmark: %v\n", time.Since(start))
+	fmt.Printf("Starsky Write benchmark: %v\n", time.Since(start))
 
 	// Benchmark Get
 	start = time.Now()
