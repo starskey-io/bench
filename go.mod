@@ -4,7 +4,7 @@ go 1.23.5
 
 require (
 	github.com/cockroachdb/pebble v1.1.3
-	github.com/starskey-io/starskey v0.0.6
+	github.com/starskey-io/starskey v0.0.9
 	go.etcd.io/bbolt v1.3.11
 )
 
