@@ -5,7 +5,7 @@ go 1.23.5
 require (
 	github.com/cockroachdb/pebble v1.1.3
 	github.com/dgraph-io/badger/v4 v4.5.1
-	github.com/starskey-io/starskey v0.1.5
+	github.com/starskey-io/starskey v0.1.6
 	go.etcd.io/bbolt v1.3.11
 )
 
