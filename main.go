@@ -21,6 +21,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/cockroachdb/pebble"
+	"github.com/dgraph-io/badger/v4"
 	"github.com/starskey-io/starskey"
 	bolt "go.etcd.io/bbolt"
 	"log"
@@ -229,6 +230,64 @@ func BenchBBolt() {
 	fmt.Printf("BBolt Delete benchmark: %v\n", time.Since(start))
 }
 
+func BenchBadger() {
+	var dbPath = "badger_bench"
+	defer os.RemoveAll(dbPath)
+
+	pairs := generateRandomPairs(nOps, kvLen)
+
+	opts := badger.DefaultOptions(dbPath)
+	opts.Logger = nil      // Disable logging for benchmark
+	opts.SyncWrites = true // Ensure writes are synced to disk
+	db, err := badger.Open(opts)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
+
+	// Benchmark Write
+	start := time.Now()
+	for _, pair := range pairs {
+		err = db.Update(func(txn *badger.Txn) error {
+			return txn.Set([]byte(pair.key), []byte(pair.value))
+		})
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	fmt.Printf("Badger Write benchmark: %v\n", time.Since(start))
+
+	// Benchmark Get
+	start = time.Now()
+	for _, pair := range pairs {
+		err = db.View(func(txn *badger.Txn) error {
+			item, err := txn.Get([]byte(pair.key))
+			if err != nil {
+				return err
+			}
+			return item.Value(func(val []byte) error {
+				return nil
+			})
+		})
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	fmt.Printf("Badger Get benchmark: %v\n", time.Since(start))
+
+	// Benchmark Delete
+	start = time.Now()
+	for _, pair := range pairs {
+		err = db.Update(func(txn *badger.Txn) error {
+			return txn.Delete([]byte(pair.key))
+		})
+		if err != nil {
+			log.Fatal(err)
+		}
+	}
+	fmt.Printf("Badger Delete benchmark: %v\n", time.Since(start))
+}
+
 func main() {
 	flag.IntVar(&nOps, "nops", 1000, "number of operations")
 	flag.IntVar(&kvLen, "lkv", 32, "length of key-value pairs")
@@ -239,4 +298,6 @@ func main() {
 	BenchPebble()
 	fmt.Println()
 	BenchBBolt()
+	fmt.Println()
+	BenchBadger()
 }
