@@ -15,23 +15,32 @@ Run
 
 **On crappy 4 year old system** run on your server or local machine for better results and on an SSD!
 
-1000 ops with 128 byte key and value
+10000 ops with 32 byte key and value
 ```
-Starsky Write benchmark: 3.198341ms
-Starsky Get benchmark: 184.96µs
-Starsky Delete benchmark: 2.369965ms
+Starsky Write benchmark: 53.308074ms
+Starsky Get benchmark: 4.811411ms
+Starsky Delete benchmark: 28.883631ms
 
-Pebble Write benchmark: 1.019500292s
-Pebble Get benchmark: 408.216µs
-Pebble Delete benchmark: 1.066333699s
+Pebble Write benchmark: 10.784630479s
+Pebble Get benchmark: 7.294086ms
+Pebble Delete benchmark: 11.603169612s
 
-BBolt Write benchmark: 3.941174ms
-BBolt Get benchmark: 242.924µs
-BBolt Delete benchmark: 1.134009ms
+BBolt Write benchmark: 67.20567ms
+BBolt Get benchmark: 4.564291ms
+BBolt Delete benchmark: 5.458657ms
 
-Badger Write benchmark: 527.538019ms
-Badger Get benchmark: 1.49239ms
-Badger Delete benchmark: 521.008806ms
+Badger Write benchmark: 6.605586446s
+Badger Get benchmark: 12.766663ms
+Badger Delete benchmark: 6.023307227s
+
+LMDB Write benchmark: 3.741000ms
+LMDB Get benchmark: 1.996000ms
+LMDB Delete benchmark: 3.403000ms
+
+RocksDB Write benchmark: 286.912000ms
+RocksDB Get benchmark: 10.144000ms
+RocksDB Delete benchmark: 283.054000ms
+
 ```
 
 ## Contributing
