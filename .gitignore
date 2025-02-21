@@ -9,3 +9,7 @@ go.work
 go.work.sum
 .env
 .idea
+c/bench
+c/bench.exe
+bench
+bench.exe
