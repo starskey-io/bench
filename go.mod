@@ -1,11 +1,11 @@
 module bench
 
-go 1.23.5
+go 1.24
 
 require (
 	github.com/cockroachdb/pebble v1.1.3
 	github.com/dgraph-io/badger/v4 v4.5.1
-	github.com/starskey-io/starskey v0.1.6
+	github.com/starskey-io/starskey v0.1.7
 	go.etcd.io/bbolt v1.3.11
 )
 

@@ -239,8 +239,8 @@ github.com/rogpeppe/go-internal v1.9.0/go.mod h1:WtVeX8xhTBvf0smdhujwtBcq4Qrzq/f
 github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
 github.com/sirupsen/logrus v1.4.2/go.mod h1:tLMulIdttU9McNUspp0xgXVQah82FyeX6MwdIuYE2rE=
 github.com/sirupsen/logrus v1.6.0/go.mod h1:7uNnSEd1DgxDLC74fIahvMZmmYsHGZGEOFrfsX/uA88=
-github.com/starskey-io/starskey v0.1.6 h1:sEJ7dZHftWT0B+Xr1klxe0h+FVm1GHj8kR8htCDBlEU=
-github.com/starskey-io/starskey v0.1.6/go.mod h1:RcFGmdD3o4DzUsFDQiC487RZXokoZxRTOEpKJflx3pU=
+github.com/starskey-io/starskey v0.1.7 h1:S3PGEnzym1dc7ASJNT9tWIaIBtK5Sj0CkmKvrOnCaD0=
+github.com/starskey-io/starskey v0.1.7/go.mod h1:qly4ec2C/4Y45jhpL+q4m+Uxzg3mjj0t7RjpJslB3ao=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.1.1/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
